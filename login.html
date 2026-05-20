@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Travel Portal Login</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+
+      body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    /* NEW LINEAR GRADIENT BACKGROUND */
+
+    background: linear-gradient(
+        135deg,
+        #ff6a00,
+        #ee0979,
+        #6a11cb,
+        #2575fc
+    );
+    }
+
+    .container{
+      width:900px;
+      height:500px;
+      background:white;
+      border-radius:20px;
+      display:flex;
+      overflow:hidden;
+      box-shadow:0 10px 30px rgba(0,0,0,0.4);
+    }
+
+    /* Left Side */
+    .left{
+      width:50%;
+      background:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop') center/cover;
+      position:relative;
+    }
+
+    .overlay{
+      position:absolute;
+      width:100%;
+      height:100%;
+      background:rgba(0,0,0,0.45);
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      flex-direction:column;
+      color:white;
+      text-align:center;
+      padding:20px;
+    }
+
+    .overlay h1{
+      font-size:42px;
+      margin-bottom:10px;
+    }
+
+    .overlay p{
+      font-size:16px;
+      line-height:1.6;
+    }
+    .overlay p:hover{
+      color:#ffd369;
+      transition:0.3s;
+    }
+
+    /* Right Side */
+    .right{
+      width:50%;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:40px;
+    }
+
+    .login-box{
+      width:100%;
+      max-width:320px;
+    }
+
+    .login-box h2{
+      font-size:32px;
+      color:#243b55;
+      margin-bottom:10px;
+    }
+
+    .login-box p{
+      color:Black;
+      margin-bottom:30px;
+    }
+
+    .input-box{
+      margin-bottom:20px;
+    }
+
+    .input-box input{
+      width:100%;
+      padding:14px;
+      border:none;
+      outline:none;
+      border-radius:10px;
+      background:#f1f1f1;
+      font-size:15px;
+      transition:0.3s;
+    }
+
+    .input-box input:focus{
+      background:#e3e3e3;
+      border:1px solid #243b55;
+    }
+
+    .options{
+      display:flex;
+      justify-content:space-between;
+      font-size:14px;
+      margin-bottom:20px;
+    }
+
+    .options a{
+      text-decoration:none;
+      color:#243b55;
+    }
+
+    .login-btn{
+      width:100%;
+      padding:14px;
+      border:none;
+      border-radius:10px;
+      background:#243b55;
+      color:white;
+      font-size:16px;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    .login-btn:hover{
+      background:#141e30;
+      transform:scale(1.02);
+    }
+
+    .signup{
+      margin-top:20px;
+      text-align:center;
+      font-size:14px;
+    }
+
+    .signup a{
+      color:#243b55;
+      text-decoration:none;
+      font-weight:bold;
+    }
+
+    /* Responsive */
+    @media(max-width:768px){
+      .container{
+        width:95%;
+        flex-direction:column;
+        height:auto;
+      }
+
+      .left{
+        width:100%;
+        height:220px;
+      }
+
+      .right{
+        width:100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- Left Side -->
+    <div class="left">
+      <div class="overlay">
+        <h1>Travel Portal</h1>
+        <p>
+          Explore the world with amazing destinations,
+          flights, hotels and unforgettable experiences.
+        </p>
+      </div>
+    </div>
+
+    <!-- Right Side -->
+    <div class="right">
+      <div class="login-box">
+
+        <h2>Welcome Back</h2>
+        <p>Login to continue your journey</p>
+
+        <form>
+
+          <div class="input-box">
+            <input type="email" placeholder="Enter Your Email" required>
+          </div>
+
+          <div class="input-box">
+            <input type="password" placeholder="Enter Your Password" required>
+          </div>
+
+          <div class="options">
+            <label>
+              <input type="checkbox"> Remember
+            </label>
+
+            <a href="#">Forgot Password?</a>
+          </div>
+
+          <button class="login-btn">Login</button>
+
+        </form>
+
+        <div class="signup">
+          Don’t have an account?
+          <a href="#">Sign Up</a>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
